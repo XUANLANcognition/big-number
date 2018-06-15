@@ -1,8 +1,7 @@
 #ifndef _MP_INT_H
 #define _MP_INT_H
 
-#include "bigNum.h"
-#include "Mp_exception.h"
+#include "Mid_components.h"
 
 /* Mp_int class */
 class Mp_int{

@@ -16,7 +16,8 @@ Mp_int::Mp_int() try {
   alloc = MP_PREC;
   used = 0;
   sign = MP_POSI;
-} catch (const mem_error &e) {
+} catch (mp_error &e) {
+  e.handle_error();
 }
     
 /* default constructor */

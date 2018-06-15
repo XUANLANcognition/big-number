@@ -1,3 +1,6 @@
+#ifndef _BIGNUM_H
+#define _BIGNUM_H
+
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -15,3 +18,5 @@
 
 /* */
 typedef uint8_t mp_digit;
+
+#endif
