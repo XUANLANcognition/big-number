@@ -21,11 +21,13 @@ void Mp_int::mp_grow(int b){
     e.handle_error();
   }
 
-  for(int i = 0; i < alloc; i++){
+  int i;
+
+  for(i = 0; i < alloc; i++){
     tmp[i] = dp[i];  
   }
 
-  for(int i = alloc - 1; i < v; i++){
+  for(; i < v; i++){
     tmp[i] = 0;
   }
   

@@ -12,12 +12,14 @@ Mp_int &Mp_int::operator=(const Mp_int &m){
     e.handle_error();
   }
 
-  for(int i = 0; i < m.used; i++){
+  int i;
+
+  for(i = 0; i < m.used; i++){
     dp[i] = m.dp[i];
   }
 
-  for(int i = m.used - 1; i < m.alloc; i++){
-    dp[i] = 0;    
+  for(; i < m.alloc; i++){
+    dp[i] = 0;
   }
 
   alloc = m.alloc;
