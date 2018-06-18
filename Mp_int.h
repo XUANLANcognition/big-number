@@ -11,7 +11,7 @@ class Mp_int{
   friend std::ostream &operator<<(std::ostream &os, Mp_int &mp_int);
   void mp_grow(int b);
   void mp_zip();
-
+  Mp_int &operator=(const Mp_int &m);
 
   /* universal interface */
   int getAlloc();

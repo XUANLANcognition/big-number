@@ -18,6 +18,14 @@ TEST(Mp_zipTest, zip) {
   // incomplete
 }
 
+TEST(Mp_copyTest, copy) {
+  Mp_int a, b;
+  a.mp_grow(50);
+  b = a;
+  EXPECT_EQ(64, b.getAlloc());
+  // incomplete
+}
+
 int main(int argc, char **argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
