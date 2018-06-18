@@ -9,6 +9,9 @@ class Mp_int{
   Mp_int();
   ~Mp_int();
   friend std::ostream &operator<<(std::ostream &os, Mp_int &mp_int);
+  void mp_grow(int b);
+  void mp_zip();
+
 
   /* universal interface */
   int getAlloc();
