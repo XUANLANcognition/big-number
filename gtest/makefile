@@ -6,7 +6,8 @@ CXXFLAGS = -Wall -g -std=c++11 -pthread
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 OBJECTS = main.o ../Mp_int.o ../Mp_clear.o ../Mp_print.o ../Mp_uf.o \
-../Mem_error.o  ../Mp_error.o ../mp_grow.o ../mp_zip.o ../mp_copy.o
+../Mem_error.o  ../Mp_error.o ../mp_grow.o ../mp_zip.o ../mp_copy.o \
+../mp_set.o ../mp_zero.o
 
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
                 $(GTEST_DIR)/include/gtest/internal/*.h

@@ -4,6 +4,7 @@
 TEST(Mp_intTest, init) {
   Mp_int m;
   EXPECT_EQ(32, m.getAlloc());
+  EXPECT_EQ(0, m.getUsed());
 }
 
 TEST(Mp_growTest, grow) {
@@ -20,9 +21,11 @@ TEST(Mp_zipTest, zip) {
 
 TEST(Mp_copyTest, copy) {
   Mp_int a, b;
-  a.mp_grow(50);
+  a.mp_set(1234);
+  EXPECT_EQ(4, a.getUsed());
+  EXPECT_EQ(0, b.getUsed());
   b = a;
-  EXPECT_EQ(64, b.getAlloc());
+  EXPECT_EQ(4, b.getUsed());
   // incomplete
 }
 
