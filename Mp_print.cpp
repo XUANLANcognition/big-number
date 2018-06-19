@@ -6,8 +6,8 @@ std::ostream &operator<<(std::ostream &os, Mp_int &mp_int){
     os << 0;
   }
   else{
-    for(int i = 0; i < mp_int.used; i++){
-      os << (int)mp_int.dp[i];
+    for(int i = mp_int.used - 1; i >= 0; i--){
+      os << (int)mp_int.dp[i] << '.';
     }
   }
 
