@@ -14,6 +14,9 @@ class Mp_int{
   void mp_zip();
   void mp_zero();
   void mp_set(unsigned int b);
+  Mp_int &operator-();
+  friend void mp_s_add(Mp_int &a, Mp_int &b, Mp_int &c);
+  friend Mp_int &operator+(const Mp_int &a, const Mp_int &b);
 
   /* universal interface */
   int getAlloc();

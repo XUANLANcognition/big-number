@@ -22,10 +22,16 @@ TEST(Mp_zipTest, zip) {
 TEST(Mp_copyTest, copy) {
   Mp_int a, b;
   a.mp_set(1234);
-  EXPECT_EQ(4, a.getUsed());
+  EXPECT_EQ(2, a.getUsed());
   EXPECT_EQ(0, b.getUsed());
   b = a;
-  EXPECT_EQ(4, b.getUsed());
+  EXPECT_EQ(2, b.getUsed());
+  // incomplete
+}
+
+TEST(Mp_oppositeTest, opposite) {
+  Mp_int a, b;
+  a.mp_set(1234);
   // incomplete
 }
 
